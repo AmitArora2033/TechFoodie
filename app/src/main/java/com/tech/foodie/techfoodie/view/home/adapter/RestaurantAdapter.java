@@ -51,6 +51,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
         .into(holder.restaurantImage);
     holder.ratingBar.setRating(
         Float.parseFloat(restaurants.get(position).uSerRating().aggregateRating()));
+    holder.tvRestaurantCity.setText(restaurants.get(position).location().city());
     holder.tvPriceRange.setText(holder.tvPriceRange.getContext()
         .getString(R.string.prince_for_two, restaurants.get(position).currency(),
             String.valueOf(restaurants.get(position).avgCostForTwo())));
@@ -71,7 +72,7 @@ public class RestaurantAdapter extends RecyclerView.Adapter<RestaurantAdapter.Vi
     @BindView(R.id.tv_restautant_description) TextView tvDescription;
     @BindView(R.id.img_restaurant) ImageView restaurantImage;
     @BindView(R.id.delivery_time) TextView tvDeliveryTime;
-    @BindView(R.id.live_racking_available) TextView tvLiveTracking;
+    @BindView(R.id.restaurant_city) TextView tvRestaurantCity;
     @BindView(R.id.tv_price_per_person) TextView tvPriceRange;
 
     public ViewHolder(@NonNull View itemView, RestaurantClickListener listener) {
