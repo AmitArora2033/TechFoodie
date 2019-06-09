@@ -87,7 +87,12 @@ public class HomeFragment extends BaseFragment
           Log.e("Error", throwable.getMessage());
         })
         .switchMap(charSequence -> {
-          loadRestaurantList(charSequence.getView().getEditableText().toString());
+          String search = charSequence.getView().getEditableText().toString();
+          if (search.length() > 0) {
+            loadRestaurantList(charSequence.getView().getEditableText().toString());
+          } else {
+            loadRestaurantList(DEFAULT_SEARCH);
+          }
           return Observable.just(charSequence.getText());
         })
         .subscribe();
