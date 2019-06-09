@@ -1,0 +1,11 @@
+<resources>
+  <string name="app_name">TechFoodie</string>
+  <string name="unknown_error_occurred">Unknown Error Occurred! Please try again</string>
+  <string name="prince_for_two">%s %s for two</string>
+  <string name="search">Search</string>
+  <string name="browse">What would you like to Eat Toady?</string>
+  <string name="open">Open</string>
+  <string name="address">Address</string>
+  <string name="permission_success">Permission Success</string>
+  <string name="order_at_zomato">Order At Zomato</string>
+</resources>
